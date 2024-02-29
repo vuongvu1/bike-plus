@@ -1,3 +1,21 @@
+:root {
+  /* Colors */
+  --primary-color: #91c434;
+  --secondary-color: #333;
+  --background-color: #fff;
+  --text-color: #000;
+
+  /* Spacings */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
+
+  /* Other variables */
+  /* ... */
+}
+
 body {
   font-family: "Titillium Web", sans-serif;
 }
