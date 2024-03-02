@@ -1,0 +1,17 @@
+@keyframes moving {
+  from {
+    left: -60%;
+  }
+  to {
+    left: 60%;
+  }
+}
+
+.container {
+  padding-top: var(--spacing-md);
+  svg {
+    height: 100px;
+    position: relative;
+    animation: moving var(--duration-long) ease-in-out infinite;
+  }
+}
