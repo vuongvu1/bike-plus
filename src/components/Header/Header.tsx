@@ -1,4 +1,4 @@
-import styles from "./style.module.css";
+import styles from "./Header.module.css";
 import Logo from "../../assets/bike-plus-logo.svg";
 import Avatar from "../../assets/sample-avatar.webp";
 

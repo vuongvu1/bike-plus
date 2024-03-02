@@ -1,0 +1,8 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-xs);
+  background-color: var(--background-color-branded);
+  border-top: 1px solid var(--border-color);
+}

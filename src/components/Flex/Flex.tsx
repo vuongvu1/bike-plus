@@ -1,5 +1,5 @@
 import React, { CSSProperties } from "react";
-import styles from "./style.module.css";
+import styles from "./Flex.module.css";
 
 interface FlexProps {
   direction?: "row" | "row-reverse" | "column" | "column-reverse";
