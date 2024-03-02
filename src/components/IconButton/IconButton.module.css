@@ -1,0 +1,17 @@
+.iconButton {
+  background: none;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: color var(--duration-normal) ease,
+    background-color var(--duration-normal) ease;
+
+  &:hover {
+    color: var(--text-color-hover);
+    background-color: var(--background-color-hover);
+  }
+}

@@ -1,7 +1,0 @@
-.action {
-  &:hover {
-    cursor: pointer;
-    color: var(--text-color-hover);
-    transition: color var(--duration-fast) ease;
-  }
-}
