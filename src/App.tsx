@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { MockDataContext, MockDataType } from "./contexts/MockDataContext";
 
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
@@ -16,24 +17,26 @@ const App: React.FC = () => {
   const { data, loading } = useFetchMockData();
 
   return (
-    <BrowserRouter>
-      <Header />
-      <Body>
-        {loading ? (
-          <Loading />
-        ) : (
-          <Suspense fallback={<Loading />}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/marketplace" element={<MarketplacePage />} />
-              <Route path="/repair" element={<RepairPage />} />
-              <Route path="*" element={<ErrorPage />} />
-            </Routes>
-          </Suspense>
-        )}
-      </Body>
-      <Footer />
-    </BrowserRouter>
+    <MockDataContext.Provider value={data as MockDataType}>
+      <BrowserRouter>
+        <Header />
+        <Body>
+          {loading ? (
+            <Loading />
+          ) : (
+            <Suspense fallback={<Loading />}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/marketplace" element={<MarketplacePage />} />
+                <Route path="/repair" element={<RepairPage />} />
+                <Route path="*" element={<ErrorPage />} />
+              </Routes>
+            </Suspense>
+          )}
+        </Body>
+        <Footer />
+      </BrowserRouter>
+    </MockDataContext.Provider>
   );
 };
 

@@ -2,4 +2,5 @@
   width: var(--spacing-xl);
   height: var(--spacing-xl);
   border-radius: var(--border-radius-round);
+  object-fit: cover;
 }

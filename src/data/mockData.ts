@@ -17,18 +17,18 @@ export const mockData = {
     },
     {
       id: "6ba7b811-2222-11d1-80b4-00c04fd430c8",
-      name: "Unpopular Penguin",
+      name: "Unpopular Bird",
       avatar: "https://i.imgur.com/r4LKujM.jpeg",
     },
     {
       id: "6ba7b811-1111-11d1-80b4-00c04fd430c8",
-      name: "Awkward Seal",
-      avatar: "https://i.imgur.com/r4LKujM.jpeg",
+      name: "I'm Joker",
+      avatar: "https://i.imgur.com/eYcuL2u.png",
     },
     {
-      id: "6ba7b815-9dad-11d1-80b4-00c04fd430c8",
-      name: "Light Kira",
-      avatar: "https://i.imgur.com/F6OGt7W.jpeg",
+      id: "6ba7b815-9dad-11d1-80b4-12344fd430c8",
+      name: "Tired Tiger",
+      avatar: "https://i.imgur.com/i9P8iCH.jpeg",
     },
   ],
   feeds: [
