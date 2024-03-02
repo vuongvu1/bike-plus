@@ -1,7 +1,13 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./Header.module.css";
 import Logo from "../../assets/bike-plus-logo.svg";
 import Avatar from "../../assets/sample-avatar.webp";
+
+const linkLabelMap = [
+  { link: "/", label: "Community" },
+  { link: "/marketplace", label: "Marketplace" },
+  { link: "/repair", label: "Bike Repair" },
+];
 
 export const Header = () => {
   return (
@@ -11,15 +17,16 @@ export const Header = () => {
       </div>
       <nav className={styles.nav}>
         <ul>
-          <li>
-            <Link to="/">Community</Link>
-          </li>
-          <li>
-            <Link to="/marketplace">Marketplace</Link>
-          </li>
-          <li>
-            <Link to="/repair">Bike Repair</Link>
-          </li>
+          {linkLabelMap.map(({ link, label }) => (
+            <li key={link}>
+              <NavLink
+                to={link}
+                className={({ isActive }) => (isActive ? styles.active : "")}
+              >
+                {label}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </nav>
       <div className={styles.avatar}>
