@@ -1,1 +1,1 @@
-export { Repair } from "./Repair";
+export { default } from "./Repair";
