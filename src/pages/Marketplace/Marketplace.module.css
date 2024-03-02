@@ -1,0 +1,5 @@
+.body {
+  min-height: 100vh;
+  padding: var(--spacing-md);
+  background-color: var(--background-color);
+}

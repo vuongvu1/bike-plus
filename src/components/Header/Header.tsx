@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 import Logo from "../../assets/bike-plus-logo.svg";
 import Avatar from "../../assets/sample-avatar.webp";
@@ -11,13 +12,13 @@ export const Header = () => {
       <nav className={styles.nav}>
         <ul>
           <li>
-            <a href="/">Community</a>
+            <Link to="/">Community</Link>
           </li>
           <li>
-            <a href="/marketplace">Marketplace</a>
+            <Link to="/marketplace">Marketplace</Link>
           </li>
           <li>
-            <a href="/bike-repair">Bike Repair</a>
+            <Link to="/repair">Bike Repair</Link>
           </li>
         </ul>
       </nav>
