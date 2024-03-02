@@ -26,7 +26,8 @@
       color: var(--text-color-lighter);
       font-size: var(--font-size-md);
       font-weight: var(--font-weight-bold);
-      border-bottom: 1px solid transparent;
+      border-bottom: 2px solid transparent;
+      padding-block: var(--spacing-xs);
       transition: color var(--duration-normal) ease,
         border-bottom var(--duration-normal) ease;
 
