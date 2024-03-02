@@ -1,9 +1,7 @@
-.card {
-  background-color: var(--background-color);
-  border-radius: var(--border-radius-md);
-  box-shadow: var(--box-shadow);
-}
-
-.content {
-  padding: var(--spacing-md);
+.action {
+  &:hover {
+    cursor: pointer;
+    color: var(--text-color-hover);
+    transition: color var(--duration-fast) ease;
+  }
 }
