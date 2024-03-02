@@ -14,10 +14,11 @@ import SampleMedia from "../../assets/images/sample-media.webp";
 
 type CardProps = {
   children: React.ReactNode;
-  isLiked?: boolean;
 };
 
-export const FeedCard: React.FC<CardProps> = ({ children, isLiked }) => {
+export const FeedCard: React.FC<CardProps> = ({ children }) => {
+  const [isLiked, setIsLiked] = React.useState(false);
+
   return (
     <Card>
       <CardContent>
@@ -35,7 +36,8 @@ export const FeedCard: React.FC<CardProps> = ({ children, isLiked }) => {
         <Flex justify="space-between">
           <Flex gap="var(--spacing-sm)">
             <IconButton
-              icon={isLiked ? <LoveFilledIcon fill="red" /> : <LoveIcon />}
+              onClick={() => setIsLiked(!isLiked)}
+              icon={isLiked ? <LoveFilledIcon /> : <LoveIcon />}
             />
             <IconButton icon={<CommentIcon />} />
           </Flex>
