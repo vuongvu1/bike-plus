@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Header.module.css";
 import { Avatar } from "../Avatar";
-import Logo from "../../assets/bike-plus-logo.svg";
-import AvatarImage from "../../assets/sample-avatar.webp";
+import Logo from "../../assets/images/bike-plus-logo.svg";
+import AvatarImage from "../../assets/images/sample-avatar.webp";
 
 const linkLabelMap = [
   { link: "/", label: "Community" },

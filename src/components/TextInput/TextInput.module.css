@@ -1,0 +1,13 @@
+.textInput {
+  padding: var(--spacing-sm);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-md);
+  flex-basis: 100%;
+  transition: border-color var(--duration-normal) ease;
+
+  &:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+}

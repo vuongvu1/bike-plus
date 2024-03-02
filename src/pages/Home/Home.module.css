@@ -13,13 +13,14 @@
   padding: var(--spacing-md);
   position: sticky;
   top: 50px;
+  flex-shrink: 10;
 }
 
 .main {
   display: flex;
   flex-direction: column;
   flex-basis: 600px;
-  flex-shrink: 0;
+  flex-shrink: 1;
   padding: var(--spacing-md);
   gap: var(--spacing-md);
 }
@@ -32,4 +33,5 @@
   padding: var(--spacing-md);
   position: sticky;
   top: 50px;
+  flex-shrink: 10;
 }

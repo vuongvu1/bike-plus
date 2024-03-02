@@ -1,17 +1,24 @@
 .iconButton {
-  background: none;
+  background-color: var(--background-color);
   border: none;
-  border-radius: var(--border-radius-sm);
+  border-radius: var(--border-radius-round);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: var(--spacing-xl);
+  height: var(--spacing-xl);
+  flex-shrink: 0;
 
   transition: color var(--duration-normal) ease,
     background-color var(--duration-normal) ease;
 
   &:hover {
     color: var(--text-color-hover);
-    background-color: var(--background-color-hover);
+  }
+
+  &:active {
+    color: var(--text-color-hover);
+    background-color: var(--background-color-grey);
   }
 }

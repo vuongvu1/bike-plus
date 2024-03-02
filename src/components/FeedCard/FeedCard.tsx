@@ -4,13 +4,13 @@ import { UserAvatar } from "../UserAvatar";
 import { Flex } from "../Flex";
 import { Typography } from "../Typography";
 import { IconButton } from "../IconButton";
-import { LoveFilledIcon } from "../../assets/LoveFilledIcon";
-import { LoveIcon } from "../../assets/LoveIcon";
-import { CommentIcon } from "../../assets/CommentIcon";
-import { BookmarkIcon } from "../../assets/BookmarkIcon";
+import { LoveFilledIcon } from "../../assets/icons/LoveFilledIcon";
+import { LoveIcon } from "../../assets/icons/LoveIcon";
+import { CommentIcon } from "../../assets/icons/CommentIcon";
+import { BookmarkIcon } from "../../assets/icons/BookmarkIcon";
 
-import AvatarImage from "../../assets/sample-avatar.webp";
-import SampleMedia from "../../assets/sample-media.webp";
+import AvatarImage from "../../assets/images/sample-avatar.webp";
+import SampleMedia from "../../assets/images/sample-media.webp";
 
 type CardProps = {
   children: React.ReactNode;
