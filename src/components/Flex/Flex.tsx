@@ -11,6 +11,7 @@ interface FlexProps {
     | "space-around"
     | "space-evenly";
   align?: "stretch" | "flex-start" | "flex-end" | "center" | "baseline";
+  gap?: string;
   style?: CSSProperties;
   className?: string;
   children: React.ReactNode;
@@ -20,6 +21,7 @@ export const Flex: React.FC<FlexProps> = ({
   direction = "row",
   justify = "flex-start",
   align = "stretch",
+  gap = "0",
   className,
   style,
   children,
@@ -28,6 +30,7 @@ export const Flex: React.FC<FlexProps> = ({
     "--flex-direction": direction,
     "--flex-justify": justify,
     "--flex-align": align,
+    "--flex-gap": gap,
     ...style,
   } as CSSProperties;
 

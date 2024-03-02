@@ -9,7 +9,7 @@
 .navigation {
   display: flex;
   flex-direction: column;
-  flex-basis: 360px;
+  flex-basis: 300px;
   padding: var(--spacing-md);
   position: sticky;
   top: 50px;
@@ -18,7 +18,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  flex-basis: 740px;
+  flex-basis: 600px;
   padding: var(--spacing-md);
   gap: var(--spacing-md);
 }
@@ -26,7 +26,7 @@
 .complementary {
   display: flex;
   flex-direction: column;
-  flex-basis: 360px;
+  flex-basis: 300px;
   gap: var(--spacing-sm);
   padding: var(--spacing-md);
   position: sticky;

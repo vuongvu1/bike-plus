@@ -3,6 +3,7 @@ import styles from "./Home.module.css";
 import { Card, CardContent } from "../../components/Card";
 import { UserAvatar } from "../../components/UserAvatar";
 import AvatarImage from "../../assets/sample-avatar.webp";
+import { FeedCard } from "../../components/FeedCard";
 
 const Home: React.FC = () => {
   return (
@@ -13,15 +14,9 @@ const Home: React.FC = () => {
         </Card>
       </div>
       <div className={styles.main} role="main">
-        <Card>
-          <CardContent>Main lorem ipsum</CardContent>
-        </Card>
-        <Card>
-          <CardContent>Main lorem ipsum</CardContent>
-        </Card>
-        <Card>
-          <CardContent>Main lorem ipsum</CardContent>
-        </Card>
+        <FeedCard>test</FeedCard>
+        <FeedCard>test</FeedCard>
+        <FeedCard>test</FeedCard>
       </div>
       <div className={styles.complementary} role="complementary">
         <UserAvatar src={AvatarImage} alt="User avatar" username="User Name" />

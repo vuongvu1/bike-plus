@@ -16,3 +16,12 @@ type CardContentProps = {
 export const CardContent: React.FC<CardContentProps> = ({ children }) => {
   return <div className={styles.content}>{children}</div>;
 };
+
+type CardMediaProps = {
+  src: string;
+  alt: string;
+};
+
+export const CardMedia: React.FC<CardMediaProps> = ({ src, alt }) => {
+  return <img className={styles.media} src={src} alt={alt} />;
+};

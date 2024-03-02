@@ -7,9 +7,3 @@
 .content {
   padding: var(--spacing-md);
 }
-
-.media {
-  max-height: 400px;
-  object-fit: cover;
-  width: 100%;
-}
