@@ -7,6 +7,7 @@
   padding-inline: var(--spacing-md);
   background-color: var(--background-color);
   box-shadow: var(--box-shadow);
+  z-index: var(--z-index-header);
 
   .logo img {
     height: var(--spacing-lg);
