@@ -45,10 +45,5 @@
   .avatar {
     display: flex;
     align-items: center;
-
-    img {
-      border-radius: var(--border-radius-round);
-      height: var(--spacing-xl);
-    }
   }
 }
