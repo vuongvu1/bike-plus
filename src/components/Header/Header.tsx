@@ -13,7 +13,9 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <img src={Logo} alt="Bike Plus Logo" />
+        <NavLink to="/">
+          <img src={Logo} alt="Bike Plus Logo" />
+        </NavLink>
       </div>
       <nav className={styles.nav}>
         <ul>

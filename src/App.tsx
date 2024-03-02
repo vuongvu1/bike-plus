@@ -8,6 +8,7 @@ import { Body } from "./components/Body";
 const HomePage = lazy(() => import("./pages/Home"));
 const MarketplacePage = lazy(() => import("./pages/Marketplace"));
 const RepairPage = lazy(() => import("./pages/Repair"));
+const ErrorPage = lazy(() => import("./pages/Error"));
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/marketplace" element={<MarketplacePage />} />
             <Route path="/repair" element={<RepairPage />} />
+            <Route path="*" element={<ErrorPage />} />
           </Routes>
         </Suspense>
       </Body>
