@@ -13,16 +13,6 @@ export const InputCard: React.FC = () => {
   const [inputValue, setInputValue] = React.useState("");
   const [isLoading, startLoading] = useMockLoading();
 
-  // const [fakeLoading, setFakeLoading] = React.useState(false);
-
-  // React.useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setFakeLoading(false);
-  //   }, 1000);
-
-  //   return () => clearTimeout(timer);
-  // }, []);
-
   const {
     addFeed,
     data: { user },

@@ -1,9 +1,11 @@
 .container {
   --product-size: 200px;
+  --product-size-max: 400px;
 
   flex-basis: var(--product-size);
   flex-shrink: 1;
   flex-grow: 1;
+  max-width: var(--product-size-max);
   display: flex;
   flex-direction: column;
   justify-content: space-between;

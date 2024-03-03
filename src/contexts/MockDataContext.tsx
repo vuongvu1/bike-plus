@@ -29,12 +29,14 @@ export interface MockDataType {
   friends: Friend[];
   feeds: FeedType[];
   products: ProductType[];
+  filteredProducts: ProductType[];
 }
 
 export interface MockDataContextProps {
   data: MockDataType;
   addFeed: (feed: FeedType) => void;
   deleteFeed: (feed: FeedType) => void;
+  filterProduct: (searchText: string) => void;
 }
 
 const initialData: MockDataContextProps = {
@@ -47,9 +49,11 @@ const initialData: MockDataContextProps = {
     friends: [],
     feeds: [],
     products: [],
+    filteredProducts: [],
   },
   addFeed: () => {},
   deleteFeed: () => {},
+  filterProduct: () => {},
 };
 
 export const MockDataContext =

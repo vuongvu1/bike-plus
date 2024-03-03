@@ -1,6 +1,6 @@
 import { MockDataType } from "./MockDataContext";
 
-type ActionType = "INITIAL" | "ADD_FEED" | "DELETE_FEED";
+type ActionType = "INITIAL" | "ADD_FEED" | "DELETE_FEED" | "FILTER_PRODUCT";
 
 export function contextDataReducer(
   state: MockDataType,
@@ -13,18 +13,33 @@ export function contextDataReducer(
       return {
         ...state,
         ...newData,
+        filteredProducts: newData.products,
       };
     }
     case "ADD_FEED": {
+      const newFeed = newData;
+
       return {
         ...state,
-        feeds: [newData, ...state.feeds],
+        feeds: [newFeed, ...state.feeds],
       };
     }
     case "DELETE_FEED": {
+      const deleteFeed = newData;
+
       return {
         ...state,
-        feeds: state.feeds.filter((feed) => feed.id !== newData.id),
+        feeds: state.feeds.filter((feed) => feed.id !== deleteFeed.id),
+      };
+    }
+    case "FILTER_PRODUCT": {
+      const searchText = newData.toLowerCase();
+
+      return {
+        ...state,
+        filteredProducts: state.products.filter((product) =>
+          product.name.toLowerCase().includes(searchText)
+        ),
       };
     }
     default: {

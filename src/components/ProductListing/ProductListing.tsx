@@ -7,12 +7,17 @@ import { useMockLoading } from "../../hooks/useMockLoading";
 
 export const ProductListing: React.FC = () => {
   const {
-    data: { products },
+    data: { filteredProducts },
   } = React.useContext(MockDataContext);
 
-  const [isLoading] = useMockLoading();
+  const [isLoading, startLoading] = useMockLoading();
 
-  return isLoading || !products ? (
+  // Fake loading when new filteredProducts is set
+  React.useEffect(() => {
+    startLoading();
+  }, [startLoading, filteredProducts]);
+
+  return isLoading || !filteredProducts ? (
     <Flex gap="var(--spacing-md)">
       <SkeletonCard numOfLines={3} />
       <SkeletonCard numOfLines={3} />
@@ -20,7 +25,7 @@ export const ProductListing: React.FC = () => {
     </Flex>
   ) : (
     <Flex gap="var(--spacing-md)" wrap="wrap" justify="flex-start">
-      {products.map((product) => (
+      {filteredProducts.map((product) => (
         <ProductTile
           key={product.id}
           src={product.media}

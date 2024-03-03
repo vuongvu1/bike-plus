@@ -1,24 +1,30 @@
 import React from "react";
 import { Card, CardContent } from "../Card";
-// import { MockDataContext } from "../../contexts/MockDataContext";
+import { MockDataContext } from "../../contexts/MockDataContext";
 import { TextInput } from "../TextInput";
 import { IconButton } from "../IconButton";
 import { Flex } from "../Flex";
+import { throttle } from "../../utils/throttle";
 import { SearchIcon } from "../../assets/icons/SearchIcon";
 
 export const SearchInput: React.FC = () => {
   const [inputValue, setInputValue] = React.useState("");
 
-  // const {
-  //   addFeed,
-  // } = React.useContext(MockDataContext);
+  const { filterProduct } = React.useContext(MockDataContext);
+
+  const throttledFilterProduct = React.useMemo(
+    () => throttle(filterProduct, 500),
+    [filterProduct]
+  );
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (!inputValue) {
-      return;
-    }
-    setInputValue("");
+    filterProduct(inputValue);
+  };
+
+  const handleChange = (text: string) => {
+    setInputValue(text);
+    throttledFilterProduct(text);
   };
 
   return (
@@ -28,7 +34,7 @@ export const SearchInput: React.FC = () => {
           <Flex align="center" gap="var(--spacing-sm)">
             <TextInput
               value={inputValue}
-              onChange={setInputValue}
+              onChange={handleChange}
               placeholder="Search on Marketplace"
             />
             <IconButton icon={<SearchIcon />} />

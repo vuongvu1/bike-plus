@@ -31,6 +31,9 @@ const App: React.FC = () => {
     deleteFeed: (feed: FeedType) => {
       dispatch({ type: "DELETE_FEED", newData: feed });
     },
+    filterProduct: (searchText: string) => {
+      dispatch({ type: "FILTER_PRODUCT", newData: searchText });
+    },
   };
 
   return (
