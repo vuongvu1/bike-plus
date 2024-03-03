@@ -1,18 +1,22 @@
 import React from "react";
 import styles from "./Marketplace.module.css";
-import { Flex } from "../../components/Flex";
 import { ProductListing } from "../../components/ProductListing";
 import { ProductSearchCard } from "../../components/ProductSearchCard";
+import { useDevice } from "../../hooks/useDevice";
 
 const Marketplace: React.FC = () => {
+  const currentDevice = useDevice();
+  const isDesktop = currentDevice === "desktop";
+
   return (
     <div className={styles.body}>
-      <div className={styles.navigation} role="navigation">
-        <Flex direction="column" gap="var(--spacing-sm)">
+      {isDesktop && (
+        <div className={styles.navigation} role="navigation">
           <ProductSearchCard />
-        </Flex>
-      </div>
+        </div>
+      )}
       <div className={styles.main} role="main">
+        {!isDesktop && <ProductSearchCard />}
         <ProductListing />
       </div>
     </div>

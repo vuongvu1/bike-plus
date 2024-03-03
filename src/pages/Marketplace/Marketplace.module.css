@@ -23,4 +23,7 @@
   flex-basis: var(--main-layout-width);
   flex-shrink: 1;
   padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
 }
