@@ -11,6 +11,7 @@ interface FlexProps {
     | "space-around"
     | "space-evenly";
   align?: "stretch" | "flex-start" | "flex-end" | "center" | "baseline";
+  wrap?: "wrap" | "nowrap";
   gap?: string;
   style?: CSSProperties;
   className?: string;
@@ -22,6 +23,7 @@ export const Flex: React.FC<FlexProps> = ({
   justify = "flex-start",
   align = "stretch",
   gap = "0",
+  wrap = "nowrap",
   className,
   style,
   children,
@@ -31,6 +33,7 @@ export const Flex: React.FC<FlexProps> = ({
     "--flex-justify": justify,
     "--flex-align": align,
     "--flex-gap": gap,
+    "--flex-wrap": wrap,
     ...style,
   } as CSSProperties;
 
