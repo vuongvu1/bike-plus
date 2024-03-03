@@ -6,17 +6,10 @@ import { Flex } from "../../components/Flex";
 import { NewFeeds } from "../../components/NewFeeds";
 import { InputCard } from "../../components/InputCard";
 import { FriendList } from "../../components/FriendList";
+import { useMockLoading } from "../../hooks/useMockLoading";
 
 const Home: React.FC = () => {
-  const [fakeLoading, setFakeLoading] = React.useState(true);
-
-  React.useEffect(() => {
-    const timer = setTimeout(() => {
-      setFakeLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
+  const [isLoading] = useMockLoading();
 
   return (
     <div className={styles.body}>
@@ -27,7 +20,7 @@ const Home: React.FC = () => {
       </div>
       <div className={styles.main} role="main">
         <InputCard />
-        {fakeLoading ? (
+        {isLoading ? (
           <>
             <SkeletonCard />
             <SkeletonCard numOfLines={2} />

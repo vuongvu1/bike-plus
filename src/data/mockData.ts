@@ -36,7 +36,7 @@ export const mockData = {
       id: "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
       content:
         "🚴‍♂️ 🌄 Woke up early, clipped into my pedals, and hit the road. The crisp morning air, the rhythmic hum of my tires, and the promise of adventure—it’s pure bliss. 🌞 Share your favorite sunrise rides below! 🚲 👇",
-      likes: 10,
+      likes: 1,
       comments: 2,
       media:
         "https://tse4.mm.bing.net/th/id/OIG4.b.0ztmjLFlIywunELqWp?pid=ImgGn",

@@ -1,18 +1,16 @@
 import { useState, useEffect } from "react";
 import { mockData } from "../data/mockData";
+import { useMockLoading } from "./useMockLoading";
 
 export const useFetchMockData = () => {
   const [data, setData] = useState({});
-  const [loading, setLoading] = useState(true);
+  const [isLoading] = useMockLoading();
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    if (!isLoading) {
       setData(mockData);
-      setLoading(false);
-    }, 2000);
+    }
+  }, [isLoading]);
 
-    return () => clearTimeout(timer);
-  }, [data]);
-
-  return { data, loading };
+  return { data, isLoading };
 };

@@ -7,18 +7,21 @@ import { IconButton } from "../IconButton";
 import { SkeletonCard } from "../SkeletonCard";
 import { Flex } from "../Flex";
 import { SendIcon } from "../../assets/icons/SendIcon";
+import { useMockLoading } from "../../hooks/useMockLoading";
 
 export const InputCard: React.FC = () => {
   const [inputValue, setInputValue] = React.useState("");
-  const [fakeLoading, setFakeLoading] = React.useState(false);
+  const [isLoading, startLoading] = useMockLoading();
 
-  React.useEffect(() => {
-    const timer = setTimeout(() => {
-      setFakeLoading(false);
-    }, 1000);
+  // const [fakeLoading, setFakeLoading] = React.useState(false);
 
-    return () => clearTimeout(timer);
-  }, []);
+  // React.useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setFakeLoading(false);
+  //   }, 1000);
+
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   const {
     addFeed,
@@ -30,11 +33,9 @@ export const InputCard: React.FC = () => {
     if (!inputValue) {
       return;
     }
-    setFakeLoading(true);
-    setInputValue("");
 
-    setTimeout(() => {
-      setFakeLoading(false);
+    setInputValue("");
+    startLoading(() => {
       addFeed({
         id: Math.random().toString(),
         content: inputValue,
@@ -42,7 +43,7 @@ export const InputCard: React.FC = () => {
         likes: 0,
         comments: 0,
       });
-    }, 1000);
+    });
   };
 
   return (
@@ -62,7 +63,7 @@ export const InputCard: React.FC = () => {
           </form>
         </CardContent>
       </Card>
-      {fakeLoading && <SkeletonCard numOfLines={2} />}
+      {isLoading && <SkeletonCard numOfLines={2} />}
     </>
   );
 };
