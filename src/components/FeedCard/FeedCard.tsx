@@ -8,13 +8,15 @@ import { LoveFilledIcon } from "../../assets/icons/LoveFilledIcon";
 import { LoveIcon } from "../../assets/icons/LoveIcon";
 import { CommentIcon } from "../../assets/icons/CommentIcon";
 import { BookmarkIcon } from "../../assets/icons/BookmarkIcon";
+import { CloseIcon } from "../../assets/icons/CloseIcon";
 import { FeedType } from "../../contexts/MockDataContext";
 
 type Props = {
   feed: FeedType;
+  onClose?: () => void;
 };
 
-export const FeedCard: React.FC<Props> = ({ feed }) => {
+export const FeedCard: React.FC<Props> = ({ feed, onClose }) => {
   const [isLiked, setIsLiked] = React.useState(false);
 
   if (!feed) return <div>empty</div>;
@@ -26,7 +28,14 @@ export const FeedCard: React.FC<Props> = ({ feed }) => {
     <Card>
       <CardContent>
         <Flex direction="column" gap="var(--spacing-md)">
-          <UserAvatar src={user.avatar} alt={user.name} username={user.name} />
+          <Flex justify="space-between">
+            <UserAvatar
+              src={user.avatar}
+              alt={user.name}
+              username={user.name}
+            />
+            {onClose && <IconButton icon={<CloseIcon />} onClick={onClose} />}
+          </Flex>
           <Typography variant="p">{content}</Typography>
         </Flex>
       </CardContent>

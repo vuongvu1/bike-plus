@@ -26,6 +26,7 @@ export interface MockDataType {
 export interface MockDataContextProps {
   data: MockDataType;
   addFeed: (feed: FeedType) => void;
+  deleteFeed: (feed: FeedType) => void;
 }
 
 const initialData: MockDataContextProps = {
@@ -39,6 +40,7 @@ const initialData: MockDataContextProps = {
     feeds: [],
   },
   addFeed: () => {},
+  deleteFeed: () => {},
 };
 
 export const MockDataContext =

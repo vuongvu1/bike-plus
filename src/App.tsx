@@ -28,6 +28,9 @@ const App: React.FC = () => {
     addFeed: (feed: FeedType) => {
       dispatch({ type: "ADD_FEED", newData: feed });
     },
+    deleteFeed: (feed: FeedType) => {
+      dispatch({ type: "DELETE_FEED", newData: feed });
+    },
   };
 
   return (

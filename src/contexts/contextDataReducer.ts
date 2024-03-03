@@ -1,6 +1,6 @@
 import { MockDataType } from "./MockDataContext";
 
-type ActionType = "INITIAL" | "ADD_FEED";
+type ActionType = "INITIAL" | "ADD_FEED" | "DELETE_FEED";
 
 export function contextDataReducer(
   state: MockDataType,
@@ -19,6 +19,12 @@ export function contextDataReducer(
       return {
         ...state,
         feeds: [newData, ...state.feeds],
+      };
+    }
+    case "DELETE_FEED": {
+      return {
+        ...state,
+        feeds: state.feeds.filter((feed) => feed.id !== newData.id),
       };
     }
     default: {

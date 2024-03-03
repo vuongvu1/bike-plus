@@ -109,9 +109,9 @@ export const mockData = {
       likes: 55,
       comments: 0,
       user: {
-        id: "6ba7b811-9dad-11d1-fdas-00c04fd430c8",
-        name: "Guilty Bear",
-        avatar: "https://i.imgur.com/bXvx2eA.jpeg",
+        id: "6ba7b811-2222-11d1-80b4-00c04fd430c8",
+        name: "Unpopular Bird",
+        avatar: "https://i.imgur.com/r4LKujM.jpeg",
       },
     },
   ],
