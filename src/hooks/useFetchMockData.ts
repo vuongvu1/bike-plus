@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { mockData } from "../data/mockData";
+import { mockData } from "../contexts/mockData";
 import { useMockLoading } from "./useMockLoading";
 
 export const useFetchMockData = () => {
