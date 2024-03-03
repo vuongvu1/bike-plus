@@ -18,11 +18,13 @@ type Props = {
 
 export const FeedCard: React.FC<Props> = ({ feed, onClose }) => {
   const [isLiked, setIsLiked] = React.useState(false);
+  const [addedComments, setAddedComments] = React.useState(0);
 
   if (!feed) return <div>empty</div>;
 
   const { content, media, user, likes = 0, comments = 0 } = feed;
   const totalLikes = likes + (isLiked ? 1 : 0);
+  const totalComments = comments + addedComments;
 
   return (
     <Card>
@@ -47,7 +49,7 @@ export const FeedCard: React.FC<Props> = ({ feed, onClose }) => {
               {totalLikes} like{totalLikes > 1 ? "s" : ""}
             </Typography>
             <Typography variant="p" color="var(--text-color-lighter)">
-              {comments} comment{comments > 1 ? "s" : ""}
+              {totalComments} comment{totalComments > 1 ? "s" : ""}
             </Typography>
           </Flex>
           <Flex justify="space-between">
@@ -62,7 +64,10 @@ export const FeedCard: React.FC<Props> = ({ feed, onClose }) => {
                   )
                 }
               />
-              <IconButton icon={<CommentIcon />} />
+              <IconButton
+                icon={<CommentIcon />}
+                onClick={() => setAddedComments(addedComments + 1)}
+              />
             </Flex>
             <IconButton icon={<BookmarkIcon />} />
           </Flex>
