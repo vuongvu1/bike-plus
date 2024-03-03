@@ -1,5 +1,7 @@
 import React from "react";
 import { Typography } from "../Typography";
+import { Flex } from "../Flex";
+import { Card, CardMedia, CardContent } from "../Card";
 import styles from "./ProductTile.module.css";
 
 type Props = {
@@ -11,10 +13,16 @@ type Props = {
 
 export const ProductTile: React.FC<Props> = ({ src, alt, price, name }) => {
   return (
-    <div className={styles.container}>
-      <img src={src} alt={alt} />
-      <Typography variant="h3">{name}</Typography>
-      <Typography variant="p">{price}</Typography>
-    </div>
+    <Card className={styles.container}>
+      <CardMedia src={src} alt={alt} />
+      <CardContent>
+        <Flex direction="column" gap="var(--spacing-xs)">
+          <Typography variant="h3">{name}</Typography>
+          <Typography variant="p" color="var(--text-color-lighter)">
+            {price}
+          </Typography>
+        </Flex>
+      </CardContent>
+    </Card>
   );
 };

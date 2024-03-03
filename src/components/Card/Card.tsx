@@ -3,10 +3,11 @@ import styles from "./Card.module.css";
 
 type CardProps = {
   children: React.ReactNode;
+  className?: string;
 };
 
-export const Card: React.FC<CardProps> = ({ children }) => {
-  return <div className={styles.card}>{children}</div>;
+export const Card: React.FC<CardProps> = ({ children, className }) => {
+  return <div className={`${styles.card} ${className}`}>{children}</div>;
 };
 
 type CardContentProps = {

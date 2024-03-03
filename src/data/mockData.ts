@@ -115,4 +115,78 @@ export const mockData = {
       },
     },
   ],
+  products: [
+    {
+      id: "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
+      name: "Bike Light",
+      price: "9$",
+      media: "https://m.media-amazon.com/images/I/81Gq3rPpHFL._AC_UL320_.jpg",
+    },
+    {
+      id: "6ba7b810-9dad-11d1-80b4-00c04fd430c9",
+      name: "Helmet",
+      price: "100$",
+      media: "https://m.media-amazon.com/images/I/711-j5yfYAL._AC_UL320_.jpg",
+    },
+    {
+      id: "6ba7b810-9dad-11d1-80b4-00c04fd430c7",
+      name: "Gloves",
+      price: "50$",
+      media: "https://m.media-amazon.com/images/I/91sK0TJp58L._AC_UL320_.jpg",
+    },
+    {
+      id: "6ba7b810-9dad-11d1-80b4-00c04fd430c6",
+      name: "Bike Rack",
+      price: "200$",
+      media: "https://m.media-amazon.com/images/I/71sr+Ov0aNL._AC_UL320_.jpg",
+    },
+    {
+      id: "6ba7b810-9dad-11d1-80b4-00c04fd430c5",
+      name: "Bike Pump",
+      price: "30$",
+      media: "https://m.media-amazon.com/images/I/51EylpZCmdL._AC_UL320_.jpg",
+    },
+    {
+      id: "6ba7b810-9dad-11d1-80b4-00c04fd430c4",
+      name: "Bike Lock",
+      price: "20$",
+      media: "https://m.media-amazon.com/images/I/71x7I3BYhuL._AC_UL320_.jpg",
+    },
+    {
+      id: "6ba7b810-9dad-11d1-80b4-00c04fd430c3",
+      name: "Bike Seat",
+      price: "40$",
+      media: "https://m.media-amazon.com/images/I/41IMHTbPpML._AC_UL320_.jpg",
+    },
+    {
+      id: "6ba7b810-9dad-11d1-80b4-00c04fd430c2",
+      name: "Bike Chain",
+      price: "25$",
+      media: "https://m.media-amazon.com/images/I/71NzcSPzPGL._AC_UL320_.jpg",
+    },
+    {
+      id: "6ba7b810-9dad-11d1-80b4-00c04fd430c1",
+      name: "Bike Bell",
+      price: "10$",
+      media: "https://m.media-amazon.com/images/I/514Czsd-SHL._AC_UL320_.jpg",
+    },
+    {
+      id: "6ba7b810-9dad-11d1-80b4-00c04fd430c0",
+      name: "Bike Basket",
+      price: "15$",
+      media: "https://m.media-amazon.com/images/I/91zkZSJH4kL._AC_UL320_.jpg",
+    },
+    {
+      id: "6ba7b810-9dad-11d1-80b4-321321",
+      name: "Bike Basket Cover",
+      price: "10$",
+      media: "https://m.media-amazon.com/images/I/51je6QKoaiL._AC_UL320_.jpg",
+    },
+    {
+      id: "6ba7b810-9dad-11d1-80b4-11111",
+      name: "Bike Basket Net",
+      price: "15$",
+      media: "https://m.media-amazon.com/images/I/71Xj7qbiEKL._AC_UL320_.jpg",
+    },
+  ],
 };

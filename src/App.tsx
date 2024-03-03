@@ -17,7 +17,7 @@ const ErrorPage = lazy(() => import("./pages/Error"));
 
 const App: React.FC = () => {
   const [data, dispatch] = React.useReducer(contextDataReducer, {});
-  const { data: fetchedData, loading } = useFetchMockData();
+  const { data: fetchedData, isLoading } = useFetchMockData();
 
   React.useEffect(() => {
     dispatch({ type: "INITIAL", newData: fetchedData });
@@ -39,7 +39,7 @@ const App: React.FC = () => {
         <ScrollToTop />
         <Header />
         <Body>
-          {loading ? (
+          {isLoading ? (
             <Loading />
           ) : (
             <Suspense fallback={<Loading />}>

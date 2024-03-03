@@ -17,10 +17,18 @@ export interface FeedType {
   comments: number;
 }
 
+export interface ProductType {
+  id: string;
+  name: string;
+  price: string;
+  media: string;
+}
+
 export interface MockDataType {
   user: UserType;
   friends: Friend[];
   feeds: FeedType[];
+  products: ProductType[];
 }
 
 export interface MockDataContextProps {
@@ -38,6 +46,7 @@ const initialData: MockDataContextProps = {
     },
     friends: [],
     feeds: [],
+    products: [],
   },
   addFeed: () => {},
   deleteFeed: () => {},

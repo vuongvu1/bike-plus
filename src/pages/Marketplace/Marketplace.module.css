@@ -1,5 +1,26 @@
 .body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   min-height: 100vh;
+  position: relative;
+
+  --side-layout-width: 400px;
+  --main-layout-width: 800px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  flex-basis: var(--side-layout-width);
+  flex-shrink: 10;
   padding: var(--spacing-md);
-  background-color: var(--background-color);
+  position: sticky;
+  top: 50px;
+}
+
+.main {
+  flex-basis: var(--main-layout-width);
+  flex-shrink: 1;
+  padding: var(--spacing-md);
 }
