@@ -17,7 +17,7 @@ export const mockData = {
     },
     {
       id: "6ba7b811-2222-11d1-80b4-00c04fd430c8",
-      name: "Unpopular Bird",
+      name: "Birdy",
       avatar: "https://i.imgur.com/r4LKujM.jpeg",
     },
     {
@@ -110,7 +110,7 @@ export const mockData = {
       comments: 0,
       user: {
         id: "6ba7b811-2222-11d1-80b4-00c04fd430c8",
-        name: "Unpopular Bird",
+        name: "A Bird",
         avatar: "https://i.imgur.com/r4LKujM.jpeg",
       },
     },
