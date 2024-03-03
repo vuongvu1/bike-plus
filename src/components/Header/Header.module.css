@@ -17,7 +17,7 @@
     ul {
       list-style: none;
       display: flex;
-      gap: var(--spacing-lg);
+      gap: var(--spacing-md);
       padding: 0;
     }
 
@@ -43,7 +43,9 @@
   }
 
   .avatar {
+    width: 140px;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
   }
 }
