@@ -14,7 +14,7 @@ const Home: React.FC = () => {
         </Card>
       </div>
       <div className={styles.main} role="main">
-        <InputCard onPostNewFeed={console.log} />
+        <InputCard />
         <NewFeeds />
       </div>
       <div className={styles.complementary} role="complementary">

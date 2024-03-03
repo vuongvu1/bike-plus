@@ -1,22 +1,30 @@
 import React from "react";
 import { Card, CardContent } from "../Card";
 import { CurrentUserAvatar } from "../CurrentUserAvatar";
+import { MockDataContext } from "../../contexts/MockDataContext";
 import { TextInput } from "../TextInput";
 import { IconButton } from "../IconButton";
 import { Flex } from "../Flex";
 import { SendIcon } from "../../assets/icons/SendIcon";
 
-type Props = {
-  onPostNewFeed: (value: string) => void;
-};
-
-export const InputCard: React.FC<Props> = ({ onPostNewFeed }) => {
+export const InputCard: React.FC = () => {
   const [inputValue, setInputValue] = React.useState("");
+  const {
+    addFeed,
+    data: { user },
+  } = React.useContext(MockDataContext);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (inputValue) {
-      onPostNewFeed(inputValue);
+      addFeed({
+        id: Math.random().toString(),
+        content: inputValue,
+        user,
+        likes: 0,
+        comments: 0,
+      });
+      // createdAt: new Date().toISOString(),
       setInputValue("");
     }
   };

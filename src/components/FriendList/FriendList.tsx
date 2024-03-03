@@ -5,7 +5,9 @@ import { UserAvatar } from "../UserAvatar";
 import { MockDataContext } from "../../contexts/MockDataContext";
 
 export const FriendList: React.FC = () => {
-  const { friends } = React.useContext(MockDataContext);
+  const {
+    data: { friends },
+  } = React.useContext(MockDataContext);
 
   return (
     <Flex direction="column" gap="var(--spacing-sm)">

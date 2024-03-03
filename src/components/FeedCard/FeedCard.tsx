@@ -8,7 +8,7 @@ import { LoveFilledIcon } from "../../assets/icons/LoveFilledIcon";
 import { LoveIcon } from "../../assets/icons/LoveIcon";
 import { CommentIcon } from "../../assets/icons/CommentIcon";
 import { BookmarkIcon } from "../../assets/icons/BookmarkIcon";
-import { Feed as FeedType } from "../../contexts/MockDataContext";
+import { FeedType } from "../../contexts/MockDataContext";
 
 type Props = {
   feed: FeedType;

@@ -10,7 +10,9 @@ type Props = {
 };
 
 export const CurrentUserAvatar: React.FC<Props> = ({ hideName }) => {
-  const { user } = React.useContext(MockDataContext);
+  const {
+    data: { user },
+  } = React.useContext(MockDataContext);
 
   if (!user) {
     return <Avatar src={SampleAvatar} alt="sample avatar" />;

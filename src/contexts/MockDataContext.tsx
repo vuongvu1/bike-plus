@@ -1,34 +1,45 @@
 import React from "react";
 
-interface User {
+interface UserType {
   id: string;
   name: string;
   avatar: string;
 }
 
-interface Friend extends User {}
+interface Friend extends UserType {}
 
-export interface Feed {
+export interface FeedType {
   id: string;
   content: string;
   media?: string;
-  user: User;
+  user: UserType;
   likes: number;
   comments: number;
 }
 
 export interface MockDataType {
-  user: User;
+  user: UserType;
   friends: Friend[];
-  feeds: Feed[];
+  feeds: FeedType[];
 }
 
-export const MockDataContext = React.createContext<MockDataType>({
-  user: {
-    id: "",
-    name: "",
-    avatar: "",
+export interface MockDataContextProps {
+  data: MockDataType;
+  addFeed: (feed: FeedType) => void;
+}
+
+const initialData: MockDataContextProps = {
+  data: {
+    user: {
+      id: "",
+      name: "",
+      avatar: "",
+    },
+    friends: [],
+    feeds: [],
   },
-  friends: [],
-  feeds: [],
-});
+  addFeed: () => {},
+};
+
+export const MockDataContext =
+  React.createContext<MockDataContextProps>(initialData);
