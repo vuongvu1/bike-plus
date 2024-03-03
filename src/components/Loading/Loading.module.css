@@ -14,10 +14,11 @@
 }
 
 .container {
-  padding: var(--spacing-xl);
+  --loading-spacing: 100px;
+  padding-top: var(--loading-spacing);
 
   svg {
-    height: 100px;
+    height: var(--loading-spacing);
     position: relative;
     animation: moving var(--duration-long) ease-in-out infinite;
   }
