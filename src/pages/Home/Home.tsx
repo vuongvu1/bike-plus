@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Home.module.css";
-import { Card, CardContent } from "../../components/Card";
+import { SideNavigation } from "../../components/SideNavigation";
+import { SkeletonCard } from "../../components/SkeletonCard";
 import { Flex } from "../../components/Flex";
 import { NewFeeds } from "../../components/NewFeeds";
 import { InputCard } from "../../components/InputCard";
@@ -10,23 +11,13 @@ const Home: React.FC = () => {
   return (
     <div className={styles.body}>
       <div className={styles.navigation} role="navigation">
-        <Flex direction="column" gap="var(--spacing-sm">
-          <Card>
-            <CardContent>Find a friend</CardContent>
-          </Card>
-          <Card>
-            <CardContent>Groups</CardContent>
-          </Card>
-          <Card>
-            <CardContent>Events</CardContent>
-          </Card>
-          <Card>
-            <CardContent>Saved</CardContent>
-          </Card>
+        <Flex direction="column" gap="var(--spacing-sm)">
+          <SideNavigation />
         </Flex>
       </div>
       <div className={styles.main} role="main">
         <InputCard />
+        <SkeletonCard />
         <NewFeeds />
       </div>
       <div className={styles.complementary} role="complementary">
