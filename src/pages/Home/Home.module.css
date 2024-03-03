@@ -4,12 +4,15 @@
   align-items: flex-start;
   min-height: 100vh;
   position: relative;
+
+  --side-layout-width: 300px;
+  --main-layout-width: 600px;
 }
 
 .navigation {
   display: flex;
   flex-direction: column;
-  flex-basis: 300px;
+  flex-basis: var(--side-layout-width);
   flex-shrink: 10;
   padding: var(--spacing-md);
   position: sticky;
@@ -17,7 +20,7 @@
 }
 
 .main {
-  flex-basis: 600px;
+  flex-basis: var(--main-layout-width);
   flex-shrink: 1;
   display: flex;
   flex-direction: column;
@@ -26,7 +29,7 @@
 }
 
 .complementary {
-  flex-basis: 300px;
+  flex-basis: var(--side-layout-width);
   flex-shrink: 10;
   padding: var(--spacing-md);
   position: sticky;
