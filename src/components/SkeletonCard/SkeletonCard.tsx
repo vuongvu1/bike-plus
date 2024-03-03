@@ -9,7 +9,7 @@ type Props = {
 
 export const SkeletonCard: React.FC<Props> = ({ numOfLines = 1 }) => {
   return (
-    <Card>
+    <Card className={styles.container}>
       <CardContent>
         <Flex direction="column" gap="var(--spacing-sm)">
           <div className={`${styles.skeleton} ${styles.title}`} />
