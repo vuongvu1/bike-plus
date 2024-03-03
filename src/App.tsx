@@ -6,6 +6,7 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Body } from "./components/Body";
 import { Loading } from "./components/Loading";
+import { ScrollToTop } from "./components/ScrollToTop";
 import { useFetchMockData } from "./hooks/useFetchMockData";
 
 const HomePage = lazy(() => import("./pages/Home"));
@@ -19,6 +20,7 @@ const App: React.FC = () => {
   return (
     <MockDataContext.Provider value={data as MockDataType}>
       <BrowserRouter>
+        <ScrollToTop />
         <Header />
         <Body>
           {loading ? (

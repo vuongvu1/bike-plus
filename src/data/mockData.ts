@@ -67,9 +67,9 @@ export const mockData = {
       likes: 54,
       comments: 11,
       user: {
-        id: "3b9d6bff-fbb4-4f93-b2f1-7e6c1e62a506",
-        name: "Sad Peep",
-        avatar: "https://i.imgur.com/8nLFCVP.png",
+        id: "6ba7b815-9dad-11d1-80b4-00c04fd430c8",
+        name: "Grumpy Cat",
+        avatar: "https://i.imgur.com/tbtry0V.jpeg",
       },
     },
     {
