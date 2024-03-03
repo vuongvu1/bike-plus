@@ -8,7 +8,8 @@
 }
 
 .container {
-  padding-top: var(--spacing-md);
+  padding: var(--spacing-xl);
+
   svg {
     height: 100px;
     position: relative;

@@ -1,0 +1,1 @@
+export { NewFeeds } from "./NewFeeds";

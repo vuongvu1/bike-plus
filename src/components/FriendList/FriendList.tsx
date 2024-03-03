@@ -9,7 +9,9 @@ export const FriendList: React.FC = () => {
 
   return (
     <Flex direction="column" gap="var(--spacing-sm)">
-      <Typography variant="h2">Friend List</Typography>
+      <Typography variant="h3" color="var(--text-color-lighter)">
+        Friend List
+      </Typography>
       {friends.map((friend) => (
         <UserAvatar
           key={friend.id}

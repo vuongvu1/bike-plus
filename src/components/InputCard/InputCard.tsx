@@ -6,13 +6,11 @@ import { IconButton } from "../IconButton";
 import { Flex } from "../Flex";
 import { SendIcon } from "../../assets/icons/SendIcon";
 
-type InputCardProps = {
-  avatarSrc: string;
-  avatarAlt: string;
+type Props = {
   onPostNewFeed: (value: string) => void;
 };
 
-export const InputCard: React.FC<InputCardProps> = ({ onPostNewFeed }) => {
+export const InputCard: React.FC<Props> = ({ onPostNewFeed }) => {
   const [inputValue, setInputValue] = React.useState("");
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {

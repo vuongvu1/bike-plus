@@ -8,11 +8,13 @@ interface User {
 
 interface Friend extends User {}
 
-interface Feed {
+export interface Feed {
   id: string;
   content: string;
   media?: string;
   user: User;
+  likes: number;
+  comments: number;
 }
 
 export interface MockDataType {

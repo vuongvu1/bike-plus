@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardContent, CardMedia } from "../Card";
+import { Card, CardContent, CardMedia, CardDivider } from "../Card";
 import { UserAvatar } from "../UserAvatar";
 import { Flex } from "../Flex";
 import { Typography } from "../Typography";
@@ -8,40 +8,55 @@ import { LoveFilledIcon } from "../../assets/icons/LoveFilledIcon";
 import { LoveIcon } from "../../assets/icons/LoveIcon";
 import { CommentIcon } from "../../assets/icons/CommentIcon";
 import { BookmarkIcon } from "../../assets/icons/BookmarkIcon";
+import { Feed as FeedType } from "../../contexts/MockDataContext";
 
-import AvatarImage from "../../assets/images/sample-avatar.webp";
-import SampleMedia from "../../assets/images/sample-media.webp";
-
-type CardProps = {
-  children: React.ReactNode;
+type Props = {
+  feed: FeedType;
 };
 
-export const FeedCard: React.FC<CardProps> = ({ children }) => {
+export const FeedCard: React.FC<Props> = ({ feed }) => {
   const [isLiked, setIsLiked] = React.useState(false);
+
+  if (!feed) return <div>empty</div>;
+
+  const { content, media, user, likes = 0, comments = 0 } = feed;
+  const totalLikes = likes + (isLiked ? 1 : 0);
 
   return (
     <Card>
       <CardContent>
-        <Flex direction="column" gap="var(--spacing-sm)">
-          <UserAvatar
-            src={AvatarImage}
-            alt="User avatar"
-            username="User Name"
-          />
-          <Typography variant="p">{children}</Typography>
+        <Flex direction="column" gap="var(--spacing-md)">
+          <UserAvatar src={user.avatar} alt={user.name} username={user.name} />
+          <Typography variant="p">{content}</Typography>
         </Flex>
       </CardContent>
-      <CardMedia src={SampleMedia} alt="Sample media" />
+      {media ? <CardMedia src={media} alt="feed media" /> : <CardDivider />}
       <CardContent>
-        <Flex justify="space-between">
-          <Flex gap="var(--spacing-sm)">
-            <IconButton
-              onClick={() => setIsLiked(!isLiked)}
-              icon={isLiked ? <LoveFilledIcon /> : <LoveIcon />}
-            />
-            <IconButton icon={<CommentIcon />} />
+        <Flex direction="column" gap="var(--spacing-sm)">
+          <Flex gap="var(--spacing-md)">
+            <Typography variant="p" color="var(--text-color-lighter)">
+              {totalLikes} like{totalLikes > 1 ? "s" : ""}
+            </Typography>
+            <Typography variant="p" color="var(--text-color-lighter)">
+              {comments} comment{comments > 1 ? "s" : ""}
+            </Typography>
           </Flex>
-          <IconButton icon={<BookmarkIcon />} />
+          <Flex justify="space-between">
+            <Flex gap="var(--spacing-sm)">
+              <IconButton
+                onClick={() => setIsLiked(!isLiked)}
+                icon={
+                  isLiked ? (
+                    <LoveFilledIcon fill="var(--primary-color)" />
+                  ) : (
+                    <LoveIcon />
+                  )
+                }
+              />
+              <IconButton icon={<CommentIcon />} />
+            </Flex>
+            <IconButton icon={<BookmarkIcon />} />
+          </Flex>
         </Flex>
       </CardContent>
     </Card>

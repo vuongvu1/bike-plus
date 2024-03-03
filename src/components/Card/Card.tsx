@@ -25,3 +25,7 @@ type CardMediaProps = {
 export const CardMedia: React.FC<CardMediaProps> = ({ src, alt }) => {
   return <img className={styles.media} src={src} alt={alt} />;
 };
+
+export const CardDivider: React.FC = () => {
+  return <hr className={styles.divider} />;
+};
