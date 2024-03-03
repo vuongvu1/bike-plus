@@ -10,7 +10,7 @@ export const ProductListing: React.FC = () => {
     data: { filteredProducts },
   } = React.useContext(MockDataContext);
 
-  const [isLoading, startLoading] = useMockLoading();
+  const [isLoading, startLoading] = useMockLoading(1000);
 
   // Fake loading when new filteredProducts is set
   React.useEffect(() => {

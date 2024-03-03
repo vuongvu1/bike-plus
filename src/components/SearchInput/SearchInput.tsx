@@ -27,6 +27,13 @@ export const SearchInput: React.FC = () => {
     throttledFilterProduct(text);
   };
 
+  React.useEffect(() => {
+    return () => {
+      filterProduct("");
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <Card>
       <CardContent>

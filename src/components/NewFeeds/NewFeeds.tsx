@@ -10,7 +10,7 @@ export const NewFeeds: React.FC = () => {
     data: { feeds, user: currentUser },
   } = React.useContext(MockDataContext);
 
-  const [isLoading] = useMockLoading();
+  const [isLoading] = useMockLoading(1000);
 
   return isLoading || !feeds ? (
     <>

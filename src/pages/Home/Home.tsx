@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Home.module.css";
 import { SideNavigation } from "../../components/SideNavigation";
-import { Flex } from "../../components/Flex";
 import { NewFeeds } from "../../components/NewFeeds";
 import { InputCard } from "../../components/InputCard";
 import { FriendList } from "../../components/FriendList";
@@ -10,9 +9,7 @@ const Home: React.FC = () => {
   return (
     <div className={styles.body}>
       <div className={styles.navigation} role="navigation">
-        <Flex direction="column" gap="var(--spacing-sm)">
-          <SideNavigation />
-        </Flex>
+        <SideNavigation />
       </div>
       <div className={styles.main} role="main">
         <InputCard />

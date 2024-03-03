@@ -11,10 +11,7 @@
   justify-content: space-between;
 
   img {
-    width: 100%;
-    height: auto;
     max-height: var(--product-size);
     border-radius: var(--border-radius-md);
-    object-fit: cover;
   }
 }
