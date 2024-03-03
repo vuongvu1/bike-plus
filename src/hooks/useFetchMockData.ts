@@ -9,7 +9,7 @@ export const useFetchMockData = () => {
     const timer = setTimeout(() => {
       setData(mockData);
       setLoading(false);
-    }, 1000);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, [data]);

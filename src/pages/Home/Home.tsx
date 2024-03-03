@@ -8,6 +8,16 @@ import { InputCard } from "../../components/InputCard";
 import { FriendList } from "../../components/FriendList";
 
 const Home: React.FC = () => {
+  const [fakeLoading, setFakeLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setFakeLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className={styles.body}>
       <div className={styles.navigation} role="navigation">
@@ -17,8 +27,16 @@ const Home: React.FC = () => {
       </div>
       <div className={styles.main} role="main">
         <InputCard />
-        <SkeletonCard />
-        <NewFeeds />
+        {fakeLoading ? (
+          <>
+            <SkeletonCard />
+            <SkeletonCard numOfLines={2} />
+            <SkeletonCard numOfLines={4} />
+            <SkeletonCard numOfLines={2} />
+          </>
+        ) : (
+          <NewFeeds />
+        )}
       </div>
       <div className={styles.complementary} role="complementary">
         <FriendList />
