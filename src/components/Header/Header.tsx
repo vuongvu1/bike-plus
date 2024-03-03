@@ -1,8 +1,7 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Header.module.css";
-import { Avatar } from "../Avatar";
+import { CurrentUserAvatar } from "../CurrentUserAvatar";
 import Logo from "../../assets/images/bike-plus-logo.svg";
-import AvatarImage from "../../assets/images/sample-avatar.webp";
 
 const linkLabelMap = [
   { link: "/", label: "Community" },
@@ -33,7 +32,7 @@ export const Header = () => {
         </ul>
       </nav>
       <div className={styles.avatar}>
-        <Avatar src={AvatarImage} alt="User Avatar" />
+        <CurrentUserAvatar hideName />
       </div>
     </header>
   );

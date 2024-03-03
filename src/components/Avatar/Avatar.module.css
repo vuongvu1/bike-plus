@@ -3,4 +3,5 @@
   height: var(--spacing-xl);
   border-radius: var(--border-radius-round);
   object-fit: cover;
+  flex-shrink: 0;
 }

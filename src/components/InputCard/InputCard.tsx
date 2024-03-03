@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, CardContent } from "../Card";
-import { Avatar } from "../Avatar";
+import { CurrentUserAvatar } from "../CurrentUserAvatar";
 import { TextInput } from "../TextInput";
 import { IconButton } from "../IconButton";
 import { Flex } from "../Flex";
@@ -12,11 +12,7 @@ type InputCardProps = {
   onPostNewFeed: (value: string) => void;
 };
 
-export const InputCard: React.FC<InputCardProps> = ({
-  avatarSrc,
-  avatarAlt,
-  onPostNewFeed,
-}) => {
+export const InputCard: React.FC<InputCardProps> = ({ onPostNewFeed }) => {
   const [inputValue, setInputValue] = React.useState("");
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -32,7 +28,7 @@ export const InputCard: React.FC<InputCardProps> = ({
       <CardContent>
         <form onSubmit={handleSubmit}>
           <Flex align="center" gap="var(--spacing-sm)">
-            <Avatar src={avatarSrc} alt={avatarAlt} />
+            <CurrentUserAvatar hideName />
             <TextInput
               value={inputValue}
               onChange={setInputValue}
