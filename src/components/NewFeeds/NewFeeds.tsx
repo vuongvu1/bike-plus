@@ -8,7 +8,7 @@ export const NewFeeds: React.FC = () => {
     data: { feeds, user: currentUser },
   } = React.useContext(MockDataContext);
 
-  return feeds.map((feed) => (
+  return feeds?.map((feed) => (
     <FeedCard
       key={feed.id}
       feed={feed}

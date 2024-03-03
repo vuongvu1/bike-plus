@@ -3,7 +3,7 @@ import { Flex } from "../Flex";
 import { Typography } from "../Typography";
 import { UserAvatar } from "../UserAvatar";
 import { MockDataContext } from "../../contexts/MockDataContext";
-import { SkeletonCard } from "../SkeletonCard";
+import SampleAvatar from "../../assets/images/sample-avatar.webp";
 
 export const FriendList: React.FC = () => {
   const {
@@ -18,10 +18,7 @@ export const FriendList: React.FC = () => {
         Friend List
       </Typography>
       {isLoading ? (
-        <>
-          <SkeletonCard numOfLines={0} />
-          <SkeletonCard numOfLines={0} />
-        </>
+        <UserAvatar src={SampleAvatar} alt="User Name" username="User Name" />
       ) : (
         friends.map((friend) => (
           <UserAvatar
