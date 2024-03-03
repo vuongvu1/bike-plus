@@ -1,11 +1,11 @@
 import React from "react";
-import styles from "./Home.module.css";
+import styles from "./Community.module.css";
 import { SideNavigation } from "../../components/SideNavigation";
 import { NewFeeds } from "../../components/NewFeeds";
 import { FeedInputCard } from "../../components/FeedInputCard";
 import { FriendList } from "../../components/FriendList";
 
-const Home: React.FC = () => {
+const Community: React.FC = () => {
   return (
     <div className={styles.body}>
       <div className={styles.navigation} role="navigation">
@@ -22,4 +22,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default Community;

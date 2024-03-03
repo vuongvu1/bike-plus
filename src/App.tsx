@@ -10,7 +10,7 @@ import { Loading } from "./components/Loading";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { useFetchMockData } from "./hooks/useFetchMockData";
 
-const HomePage = lazy(() => import("./pages/Home"));
+const CommunityPage = lazy(() => import("./pages/Community"));
 const MarketplacePage = lazy(() => import("./pages/Marketplace"));
 const RepairPage = lazy(() => import("./pages/Repair"));
 const ErrorPage = lazy(() => import("./pages/Error"));
@@ -47,7 +47,7 @@ const App: React.FC = () => {
           ) : (
             <Suspense fallback={<Loading />}>
               <Routes>
-                <Route path="/" element={<HomePage />} />
+                <Route path="/" element={<CommunityPage />} />
                 <Route path="/marketplace" element={<MarketplacePage />} />
                 <Route path="/repair" element={<RepairPage />} />
                 <Route path="*" element={<ErrorPage />} />
