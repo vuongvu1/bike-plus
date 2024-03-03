@@ -1,1 +1,0 @@
-export { InputCard } from "./InputCard";

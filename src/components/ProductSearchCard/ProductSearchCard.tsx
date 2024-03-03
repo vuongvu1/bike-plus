@@ -7,7 +7,7 @@ import { Flex } from "../Flex";
 import { throttle } from "../../utils/throttle";
 import { SearchIcon } from "../../assets/icons/SearchIcon";
 
-export const SearchInput: React.FC = () => {
+export const ProductSearchCard: React.FC = () => {
   const [inputValue, setInputValue] = React.useState("");
 
   const { filterProduct } = React.useContext(MockDataContext);

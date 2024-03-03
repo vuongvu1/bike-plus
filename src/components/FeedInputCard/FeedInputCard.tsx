@@ -9,7 +9,7 @@ import { Flex } from "../Flex";
 import { SendIcon } from "../../assets/icons/SendIcon";
 import { useMockLoading } from "../../hooks/useMockLoading";
 
-export const InputCard: React.FC = () => {
+export const FeedInputCard: React.FC = () => {
   const [inputValue, setInputValue] = React.useState("");
   const [isLoading, startLoading] = useMockLoading(1000);
 

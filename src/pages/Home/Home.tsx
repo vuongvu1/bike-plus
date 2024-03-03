@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Home.module.css";
 import { SideNavigation } from "../../components/SideNavigation";
 import { NewFeeds } from "../../components/NewFeeds";
-import { InputCard } from "../../components/InputCard";
+import { FeedInputCard } from "../../components/FeedInputCard";
 import { FriendList } from "../../components/FriendList";
 
 const Home: React.FC = () => {
@@ -12,7 +12,7 @@ const Home: React.FC = () => {
         <SideNavigation />
       </div>
       <div className={styles.main} role="main">
-        <InputCard />
+        <FeedInputCard />
         <NewFeeds />
       </div>
       <div className={styles.complementary} role="complementary">
