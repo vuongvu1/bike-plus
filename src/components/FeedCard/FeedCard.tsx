@@ -8,6 +8,7 @@ import { LoveFilledIcon } from "../../assets/icons/LoveFilledIcon";
 import { LoveIcon } from "../../assets/icons/LoveIcon";
 import { CommentIcon } from "../../assets/icons/CommentIcon";
 import { BookmarkIcon } from "../../assets/icons/BookmarkIcon";
+import { BookmarkFilledIcon } from "../../assets/icons/BookmarkFilledIcon";
 import { CloseIcon } from "../../assets/icons/CloseIcon";
 import { FeedType } from "../../contexts/MockDataContext";
 
@@ -18,6 +19,7 @@ type Props = {
 
 export const FeedCard: React.FC<Props> = ({ feed, onClose }) => {
   const [isLiked, setIsLiked] = React.useState(false);
+  const [isBookmarked, setIsBookmarked] = React.useState(false);
   const [addedComments, setAddedComments] = React.useState(0);
 
   if (!feed) return <div>empty</div>;
@@ -71,7 +73,17 @@ export const FeedCard: React.FC<Props> = ({ feed, onClose }) => {
                 onClick={() => setAddedComments(addedComments + 1)}
               />
             </Flex>
-            <IconButton icon={<BookmarkIcon />} title="Bookmark" />
+            <IconButton
+              icon={
+                isBookmarked ? (
+                  <BookmarkFilledIcon fill="var(--primary-color)" />
+                ) : (
+                  <BookmarkIcon />
+                )
+              }
+              title={isBookmarked ? "Un bookmark" : "Bookmark"}
+              onClick={() => setIsBookmarked(!isBookmarked)}
+            />
           </Flex>
         </Flex>
       </CardContent>
