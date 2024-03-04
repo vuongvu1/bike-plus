@@ -19,7 +19,7 @@
       list-style: none;
       display: flex;
       padding: 0;
-      gap: var(--spacing-md);
+      gap: var(--spacing-sm);
     }
 
     a {
@@ -43,8 +43,7 @@
       }
     }
 
-    /* All breakpoints declared in src/hooks/useDevice.ts */
-    /* In Tablet and above */
+    /* In Tablet and above ( All breakpoints declared in src/hooks/useDevice.ts) */
     @media screen and (min-width: 576px) {
       ul {
         gap: var(--spacing-lg);

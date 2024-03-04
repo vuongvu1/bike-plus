@@ -1,5 +1,10 @@
 .body {
   min-height: 100vh;
-  padding-inline: var(--spacing-md);
+  padding-inline: 0;
   background-color: var(--background-color-grey);
+
+  /* In Tablet and above (All breakpoints declared in src/hooks/useDevice.ts) */
+  @media screen and (min-width: 576px) {
+    padding-inline: var(--spacing-md);
+  }
 }

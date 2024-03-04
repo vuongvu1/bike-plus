@@ -1,10 +1,10 @@
 import React from "react";
 import { Flex } from "../Flex";
-import { Card, CardContent } from "../Card";
 import { FriendIcon } from "../../assets/icons/FriendIcon";
 import { GroupIcon } from "../../assets/icons/GroupIcon";
 import { EventIcon } from "../../assets/icons/EventIcon";
 import { BookmarkIcon } from "../../assets/icons/BookmarkIcon";
+import styles from "./SideNavigation.module.css";
 
 const iconLabelMap = [
   { label: "Find friends", icon: <FriendIcon /> },
@@ -14,15 +14,13 @@ const iconLabelMap = [
 ];
 
 export const SideNavigation: React.FC = () => (
-  <Flex direction="column" gap="var(--spacing-sm)">
-    {iconLabelMap.map(({ label, icon }) => (
-      <Card key={label}>
-        <CardContent>
-          <Flex align="center" gap="var(--spacing-sm)">
-            {icon} {label}
-          </Flex>
-        </CardContent>
-      </Card>
-    ))}
-  </Flex>
+  <div className={styles.container}>
+    <Flex direction="column" gap="var(--spacing-md)">
+      {iconLabelMap.map(({ label, icon }) => (
+        <Flex key={label} align="center" gap="var(--spacing-sm)">
+          {icon} {label}
+        </Flex>
+      ))}
+    </Flex>
+  </div>
 );
