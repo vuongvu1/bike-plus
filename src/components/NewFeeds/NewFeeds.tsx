@@ -10,9 +10,10 @@ export const NewFeeds: React.FC = () => {
     data: { feeds, user: currentUser },
   } = React.useContext(MockDataContext);
 
-  const [isLoading] = useMockLoading(1000);
+  const [isLoading] = useMockLoading();
+  const isNotReady = isLoading || !feeds;
 
-  return isLoading || !feeds ? (
+  return isNotReady ? (
     <>
       <SkeletonCard />
       <SkeletonCard numOfLines={2} />

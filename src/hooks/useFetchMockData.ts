@@ -4,7 +4,7 @@ import { useMockLoading } from "./useMockLoading";
 
 export const useFetchMockData = () => {
   const [data, setData] = useState({});
-  const [isLoading] = useMockLoading();
+  const [isLoading] = useMockLoading(2000);
 
   useEffect(() => {
     if (!isLoading) {

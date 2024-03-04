@@ -11,7 +11,7 @@ import { useMockLoading } from "../../hooks/useMockLoading";
 
 export const FeedInputCard: React.FC = () => {
   const [inputValue, setInputValue] = React.useState("");
-  const [isLoading, startLoading] = useMockLoading(1000);
+  const [isLoading, startLoading] = useMockLoading();
 
   const {
     addFeed,

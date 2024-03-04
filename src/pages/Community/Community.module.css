@@ -5,7 +5,7 @@
   min-height: 100vh;
   position: relative;
 
-  --side-layout-width: 300px;
+  --side-layout-width: 200px;
   --main-layout-width: 600px;
 }
 

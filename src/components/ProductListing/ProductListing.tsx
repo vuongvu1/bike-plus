@@ -10,14 +10,16 @@ export const ProductListing: React.FC = () => {
     data: { filteredProducts },
   } = React.useContext(MockDataContext);
 
-  const [isLoading, startLoading] = useMockLoading(1000);
+  const [isLoading, startLoading] = useMockLoading();
 
   // Fake loading when new filteredProducts is set
   React.useEffect(() => {
     startLoading();
   }, [startLoading, filteredProducts]);
 
-  return isLoading || !filteredProducts ? (
+  const isNotReady = isLoading || !filteredProducts;
+
+  return isNotReady ? (
     <Flex gap="var(--spacing-md)">
       <SkeletonCard numOfLines={3} />
       <SkeletonCard numOfLines={3} />

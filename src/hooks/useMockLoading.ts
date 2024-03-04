@@ -4,7 +4,7 @@ type UseMockLoading = (
   delay?: number
 ) => [boolean, (callback?: () => void) => void];
 
-export const useMockLoading: UseMockLoading = (delay = 2000) => {
+export const useMockLoading: UseMockLoading = (delay = 1000) => {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
