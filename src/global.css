@@ -47,7 +47,8 @@
   /* Duration */
   --duration-fast: 100ms;
   --duration-normal: 200ms;
-  --duration-long: 2000ms;
+  --duration-long: 300ms;
+  --duration-super-long: 2000ms;
 
   /* Other variables */
   --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

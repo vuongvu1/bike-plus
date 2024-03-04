@@ -48,7 +48,7 @@ export const FeedInputCard: React.FC = () => {
                 onChange={setInputValue}
                 placeholder="What is on your mind?"
               />
-              <IconButton icon={<SendIcon />} />
+              <IconButton icon={<SendIcon />} title="Add a new post" />
             </Flex>
           </form>
         </CardContent>

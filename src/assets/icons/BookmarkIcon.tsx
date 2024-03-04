@@ -1,8 +1,7 @@
 import { SVGProps } from "react";
 
 export const BookmarkIcon = (props: SVGProps<SVGSVGElement>) => (
-  <svg width={24} height={24} fill="currentColor" aria-label="Save" {...props}>
-    <title>{"Save"}</title>
+  <svg width={24} height={24} fill="currentColor" {...props}>
     <path
       fill="none"
       stroke="currentColor"

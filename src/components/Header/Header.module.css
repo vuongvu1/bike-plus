@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: var(--spacing-md);
   padding-inline: var(--spacing-md);
   background-color: var(--background-color);
   box-shadow: var(--box-shadow);
@@ -17,8 +18,8 @@
     ul {
       list-style: none;
       display: flex;
-      gap: var(--spacing-md);
       padding: 0;
+      gap: var(--spacing-md);
     }
 
     a {
@@ -31,6 +32,7 @@
       padding-block: var(--spacing-xs);
       transition: color var(--duration-normal) ease,
         border-bottom var(--duration-normal) ease;
+      padding-inline: var(--spacing-sm);
 
       &:hover {
         color: var(--text-color-hover);
@@ -38,6 +40,20 @@
 
       &.active {
         border-bottom-color: var(--primary-color);
+      }
+    }
+
+    /* All breakpoints declared in src/hooks/useDevice.ts */
+    /* In Tablet and above */
+    @media screen and (min-width: 576px) {
+      ul {
+        gap: var(--spacing-lg);
+      }
+    }
+    /* In Desktop */
+    @media screen and (min-width: 992px) {
+      a {
+        padding: 0;
       }
     }
   }

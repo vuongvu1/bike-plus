@@ -1,14 +1,7 @@
 import { SVGProps } from "react";
 
 export const SendIcon = (props: SVGProps<SVGSVGElement>) => (
-  <svg
-    width={24}
-    height={24}
-    fill="currentColor"
-    aria-label="Direct"
-    {...props}
-  >
-    <title>{"Direct"}</title>
+  <svg width={24} height={24} fill="currentColor" {...props}>
     <path
       fill="none"
       stroke="currentColor"

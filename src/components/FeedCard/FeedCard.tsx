@@ -56,6 +56,7 @@ export const FeedCard: React.FC<Props> = ({ feed, onClose }) => {
             <Flex gap="var(--spacing-sm)">
               <IconButton
                 onClick={() => setIsLiked(!isLiked)}
+                title={isLiked ? "Unlike" : "Like"}
                 icon={
                   isLiked ? (
                     <LoveFilledIcon fill="var(--primary-color)" />
@@ -66,10 +67,11 @@ export const FeedCard: React.FC<Props> = ({ feed, onClose }) => {
               />
               <IconButton
                 icon={<CommentIcon />}
+                title="Comment"
                 onClick={() => setAddedComments(addedComments + 1)}
               />
             </Flex>
-            <IconButton icon={<BookmarkIcon />} />
+            <IconButton icon={<BookmarkIcon />} title="Bookmark" />
           </Flex>
         </Flex>
       </CardContent>

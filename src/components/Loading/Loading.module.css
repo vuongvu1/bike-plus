@@ -20,6 +20,6 @@
   svg {
     height: var(--loading-spacing);
     position: relative;
-    animation: moving var(--duration-long) ease-in-out infinite;
+    animation: moving var(--duration-super-long) ease-in-out infinite;
   }
 }

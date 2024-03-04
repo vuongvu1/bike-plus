@@ -10,8 +10,8 @@ const Repair: React.FC = () => {
       </Typography>
       <iframe
         src="https://maps.google.com/maps?q=berlin&t=&z=13&ie=UTF8&iwloc=&output=embed"
-        width="600"
-        height="450"
+        width="440"
+        height="440"
         allowFullScreen
         loading="lazy"
       />
