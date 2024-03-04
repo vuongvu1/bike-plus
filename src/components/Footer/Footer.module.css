@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: var(--spacing-xs);
+  padding: var(--spacing-md);
   background-color: var(--background-color-branded);
   border-top: 1px solid var(--border-color);
 }
