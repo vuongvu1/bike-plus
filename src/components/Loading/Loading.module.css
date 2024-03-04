@@ -1,14 +1,14 @@
 @keyframes moving {
   0% {
     opacity: 0;
-    left: -60%;
+    left: -45%;
   }
   50% {
     left: 0;
     opacity: 1;
   }
   100% {
-    left: 60%;
+    left: 45%;
     opacity: 0;
   }
 }
