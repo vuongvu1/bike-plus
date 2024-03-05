@@ -1,11 +1,12 @@
 import { useState, useEffect, useCallback } from "react";
 
-type UseMockLoading = (
-  delay?: number
-) => [boolean, (callback?: () => void) => void];
+type UseMockLoading = [boolean, (callback?: () => void) => void];
 
-export const useMockLoading: UseMockLoading = (delay = 1000) => {
-  const [isLoading, setLoading] = useState(true);
+export const useMockLoading = (
+  delay = 1000,
+  initialLoading = true
+): UseMockLoading => {
+  const [isLoading, setLoading] = useState(initialLoading);
 
   useEffect(() => {
     const timer = setTimeout(() => {
