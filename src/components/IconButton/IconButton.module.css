@@ -10,7 +10,8 @@
   height: var(--spacing-xl);
   flex-shrink: 0;
 
-  transition: color var(--duration-normal) ease,
+  transition:
+    color var(--duration-normal) ease,
     background-color var(--duration-normal) ease;
 
   &:hover {

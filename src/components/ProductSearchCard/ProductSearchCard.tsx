@@ -14,7 +14,7 @@ export const ProductSearchCard: React.FC = () => {
 
   const throttledFilterProduct = React.useMemo(
     () => throttle(filterProduct, 500),
-    [filterProduct]
+    [filterProduct],
   );
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {

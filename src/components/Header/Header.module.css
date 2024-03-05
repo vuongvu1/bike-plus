@@ -31,7 +31,8 @@
       line-height: var(--line-height-md);
       border-bottom: 2px solid transparent;
       padding-block: var(--spacing-xs);
-      transition: color var(--duration-normal) ease,
+      transition:
+        color var(--duration-normal) ease,
         border-bottom var(--duration-normal) ease;
       padding-inline: var(--spacing-sm);
 

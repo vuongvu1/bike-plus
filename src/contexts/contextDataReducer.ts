@@ -4,7 +4,7 @@ type ActionType = "INITIAL" | "ADD_FEED" | "DELETE_FEED" | "FILTER_PRODUCT";
 
 export function contextDataReducer(
   state: MockDataType,
-  action: { type: ActionType; newData: any } // eslint-disable-line @typescript-eslint/no-explicit-any
+  action: { type: ActionType; newData: any }, // eslint-disable-line @typescript-eslint/no-explicit-any
 ) {
   const { type, newData } = action;
 
@@ -38,7 +38,7 @@ export function contextDataReducer(
       return {
         ...state,
         filteredProducts: state.products.filter((product) =>
-          product.name.toLowerCase().includes(searchText)
+          product.name.toLowerCase().includes(searchText),
         ),
       };
     }

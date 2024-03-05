@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 
 type UseMockLoading = (
-  delay?: number
+  delay?: number,
 ) => [boolean, (callback?: () => void) => void];
 
 export const useMockLoading: UseMockLoading = (delay = 1000) => {
@@ -24,7 +24,7 @@ export const useMockLoading: UseMockLoading = (delay = 1000) => {
         setLoading(false);
       }, delay);
     },
-    [delay]
+    [delay],
   );
 
   return [isLoading, startLoading];

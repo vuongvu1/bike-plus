@@ -5,7 +5,7 @@ const TABLET_WIDTH = 992;
 
 export const useDevice = () => {
   const [device, setDevice] = useState<"mobile" | "tablet" | "desktop">(
-    "desktop"
+    "desktop",
   );
 
   useEffect(() => {
