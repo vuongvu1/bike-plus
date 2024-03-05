@@ -7,7 +7,7 @@
   --background-color-grey: #f0f2f5;
   --background-color-hover: #fefafa;
   --text-color: #000;
-  --text-color-lighter: #707070;
+  --text-color-lighter: #6a6a6a;
   --text-color-hover: #91c434;
 
   /* Spacings */
@@ -59,8 +59,17 @@
 
   /* Other variables */
   --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --focus-shadow: 0 0 0 3px rgba(145, 196, 52, 0.5);
 }
 
 body {
   font-family: "Titillium Web", sans-serif;
+}
+
+a:focus-visible,
+input:focus-visible,
+button:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-shadow);
+  transition: box-shadow var(--duration-normal) ease;
 }

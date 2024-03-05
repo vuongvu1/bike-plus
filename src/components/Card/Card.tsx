@@ -7,7 +7,9 @@ type CardProps = {
 };
 
 export const Card: React.FC<CardProps> = ({ children, className }) => {
-  return <div className={`${styles.card} ${className}`}>{children}</div>;
+  return (
+    <article className={`${styles.card} ${className}`}>{children}</article>
+  );
 };
 
 type CardContentProps = {

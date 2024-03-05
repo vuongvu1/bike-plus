@@ -14,18 +14,18 @@ const Community: React.FC = () => {
   return (
     <div className={styles.body}>
       {isDesktop && (
-        <div className={styles.navigation} role="navigation">
+        <nav className={styles.navigation} role="navigation">
           <SideNavigation />
-        </div>
+        </nav>
       )}
-      <div className={styles.main} role="main">
+      <section className={styles.main} role="main">
         <FeedInputCard />
         <NewFeeds />
-      </div>
+      </section>
       {isLargerThanMobile && (
-        <div className={styles.complementary} role="complementary">
+        <aside className={styles.complementary} role="complementary">
           <FriendList />
-        </div>
+        </aside>
       )}
     </div>
   );
