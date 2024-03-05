@@ -1,30 +1,35 @@
-# React + TypeScript + Vite
+# Bike Plus (prototype)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+BikePlus is the hub for bike lovers. Share your favorite routes, swap gear recommendations, organize group rides, and celebrate the joy of pedaling together.
 
-Currently, two official plugins are available:
+## Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To ensure compatibility, please follow these steps:
 
-## Expanding the ESLint configuration
+1. Install Node.js version 18 by running the following command:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```
+nvm use
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Install `pnpm` as the package manager by running the following command:
+
+```
+npm install -g pnpm
+```
+
+## Getting Started
+
+Follow these steps to get started with the app:
+
+1. Install project dependencies by running the following command:
+
+```
+pnpm install
+```
+
+2. Start the app by running the following command:
+
+```
+pnpm start
+```
