@@ -1,6 +1,6 @@
 .footer {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   padding: var(--spacing-md);
   background-color: var(--background-color-branded);
