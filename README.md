@@ -36,6 +36,28 @@ pnpm install
 pnpm start
 ```
 
+## Tech Stack
+
+- Library: React 18
+- Styling: CSS modules
+- Package Manager: pnpm
+- Build Tool: Vite
+- Code Formatting: eslint, prettier
+- Routing: react-router
+- Data Management: React Context with useReducer hook
+- Deployment: Netlify
+- Use Titillium Web font via Google fonts.
+- Use [NormalizeCSS](https://github.com/necolas/normalize.css/)
+
+## Folder structure
+
+- `components/`: contains all the reusable components
+- `contexts/`: provide context
+- `pages/`: page components
+- `hooks/`: custom React hooks
+- `assets/`: contains static files like images and icons
+- `utils/`: contains utility functions that are used across the application
+
 ## Screens
 
 ### Community
