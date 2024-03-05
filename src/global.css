@@ -31,6 +31,13 @@
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
+  /* Line heights */
+  --line-height-xs: 1.2;
+  --line-height-sm: 1.4;
+  --line-height-md: 1.6;
+  --line-height-lg: 1.8;
+  --line-height-xl: 2;
+
   /* Border radius */
   --border-radius-sm: 4px;
   --border-radius-md: 8px;

@@ -8,10 +8,9 @@ import {
   useMemo,
 } from "react";
 import { MockDataContext } from "../../contexts/MockDataContext";
-import { Card, CardContent } from "../Card";
-import { Flex } from "../Flex";
 import { FeedCard } from "../FeedCard";
 import { SkeletonCard } from "../SkeletonCard";
+import { Flex } from "../Flex";
 import { useMockLoading } from "../../hooks/useMockLoading";
 import { useScrollToEnd } from "../../hooks/useScrollToEnd";
 import { debounce } from "../../utils/debounce";
@@ -103,13 +102,7 @@ export const NewFeeds: FC = () => {
           <SkeletonCard numOfLines={4} />
         </>
       )}
-      {isOutOfFeeds && (
-        <Card>
-          <CardContent>
-            <Flex justify="center">You've caught up!</Flex>
-          </CardContent>
-        </Card>
-      )}
+      {isOutOfFeeds && <Flex justify="center">You've caught up!</Flex>}
     </>
   );
 };
