@@ -4,6 +4,12 @@ Live demo: https://bikeplus.netlify.app/
 
 BikePlus is the hub for bike lovers. Share your favorite routes, swap gear recommendations, organize group rides, and buy/sell bike accessories.
 
+## Notes
+
+- The app simulates data fetching from a remote server using a custom hook called `useFetchMockData`. It is a simple timeout function that returns static JSON data.
+- There is no data persistence; refreshing the page should reset the data.
+- As this is merely a prototype app, most of the functions do not operate as expected for regular usage.
+
 ## Prerequisites
 
 To ensure compatibility, please follow these steps:
@@ -44,13 +50,14 @@ pnpm start
 - Routing: react-router
 - Data Management: React Context with useReducer hook
 - Deployment: Netlify
-- Use Titillium Web font via Google fonts.
+- Use Titillium Web font via Google fonts
 - Use [NormalizeCSS](https://github.com/necolas/normalize.css/)
+- No UI components library is being used
 
 ## Folder structure
 
 - `components/`: contains all the reusable components
-- `contexts/`: provide context
+- `contexts/`: provide context with mock data
 - `pages/`: page components
 - `hooks/`: custom React hooks
 - `assets/`: contains static files like images and icons
