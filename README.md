@@ -63,26 +63,71 @@ pnpm start
 - `assets/`: contains static files like images and icons
 - `utils/`: contains utility functions that are used across the application
 
+## Responsive Design
+
+The app supports mobile, tablet and desktop viewports.
+
+![page-responsiveness](README-assets/page-responsiveness.gif)
+
+### Desktop viewport
+
+![viewport-desktop](README-assets/viewport-desktop.png)
+
+### Tablet viewport
+
+![viewport-tablet](README-assets/viewport-tablet.png)
+
+### Mobile viewport
+
+![viewport-mobile](README-assets/viewport-mobile.png)
+
 ## Screens
 
 ### Community
 
-The homepage allows users to post, comment, and share anything related to bikes. Essentially, it’s a social network for bike enthusiasts.
+- Description: the homepage allows users to post, comment, and share anything related to bikes. Essentially, it’s a social network for bike enthusiasts.
+- Supported features: Add a new post and remove your own posts.
 
 ![screen-community](README-assets/screen-community.png)
 
 ### Marketplace
 
-The Marketplace page allows users to buy or sell new or used bike accessories.
+- Description: The Marketplace page allows users to buy or sell new or used bike accessories.
+- Supported feature: Search for items.
 
 ![screen-market](README-assets/screen-market.png)
 
 ### Bike Repair
 
-The Bike Repair page gives you access to the closest bike repair shop.
+- Description: The Bike Repair page gives you access to the closest bike repair shop.
+- No features yet available
 
 ![screen-repair](README-assets/screen-repair.png)
 
-## Responsive Design
+### Accessibility
 
-![page-responsiveness](README-assets/page-responsiveness.gif)
+- Use semantic HTML
+- Provide alternative text for images
+- Ensure sufficient color contrast
+- Keyboard interaction
+  ![keyboard-interaction](README-assets/keyboard-interaction.gif)
+
+### Performance / User experience
+
+- Code spitting with dynamic import
+- Page loading: when the page loads or switching between pages
+  ![loading-page](README-assets/loading-page.gif)
+- Skeleton loading: when feeds are loading or adding a new post
+  ![loading-skeleton](README-assets/loading-skeleton.gif)
+- Infinite scroll (experimental):
+  ![loading-infinite-scroll](README-assets/loading-infinite-scroll.gif)
+  - Note: this feature is experimental and not fully tested yet
+  - Working branch: `feat/infinite-scroll`
+  - Live demo: https://deploy-preview-1--bikeplus.netlify.app/
+
+## Improvement
+
+- Cover with tests
+- Extract reducer logic from `App.tsx` into a custom hook
+- Complete the infinite scroll feature
+- Other features: side navigation, detail page, login/logout...
