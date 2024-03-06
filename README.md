@@ -65,7 +65,7 @@ pnpm start
 
 ## Responsive Design
 
-The app supports mobile, tablet and desktop viewports.
+The app supports mobile, tablet, and desktop viewports with responsive design.
 
 ![page-responsiveness](README-assets/page-responsiveness.gif)
 
@@ -85,22 +85,21 @@ The app supports mobile, tablet and desktop viewports.
 
 ### Community
 
-- Description: the homepage allows users to post, comment, and share anything related to bikes. Essentially, it’s a social network for bike enthusiasts.
+- The homepage allows users to post, comment, and share anything related to bikes. Essentially, it’s a social network for bike enthusiasts.
 - Supported features: Add a new post and remove your own posts.
 
 ![screen-community](README-assets/screen-community.png)
 
 ### Marketplace
 
-- Description: The Marketplace page allows users to buy or sell new or used bike accessories.
+- The Marketplace page allows users to buy or sell new or used bike accessories.
 - Supported feature: Search for items.
 
 ![screen-market](README-assets/screen-market.png)
 
 ### Bike Repair
 
-- Description: The Bike Repair page gives you access to the closest bike repair shop.
-- No features yet available
+- This page will provide access to the closest bike repair shop. Feature under development.
 
 ![screen-repair](README-assets/screen-repair.png)
 
@@ -134,7 +133,7 @@ The app supports mobile, tablet and desktop viewports.
 
 ## Improvement
 
-- Cover with tests
+- Implement test coverage
 - Extract reducer logic from `App.tsx` into a custom hook
 - Complete the infinite scroll feature
 - Other features: side navigation, detail page, login/logout...
