@@ -37,7 +37,7 @@ pnpm install
 2. Start the app:
 
 ```
-pnpm dev
+pnpm start
 ```
 
 ## Tech Stack
@@ -117,14 +117,20 @@ The app supports mobile, tablet and desktop viewports.
 
 - Code spitting with dynamic import
 - Page loading: when the page loads or switching between pages
+
   ![loading-page](README-assets/loading-page.gif)
+
 - Skeleton loading: when feeds are loading or adding a new post
+
   ![loading-skeleton](README-assets/loading-skeleton.gif)
+
 - Infinite scroll (experimental):
-  ![loading-infinite-scroll](README-assets/loading-infinite-scroll.gif)
+
   - Note: this feature is experimental and not fully tested yet
   - Working branch: `feat/infinite-scroll`
   - Live demo: https://deploy-preview-1--bikeplus.netlify.app/
+
+  ![loading-infinite-scroll](README-assets/loading-infinite-scroll.gif)
 
 ## Improvement
 
