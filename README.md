@@ -52,7 +52,7 @@ pnpm start
 - Deployment: Netlify
 - Use Titillium Web font via Google fonts
 - Use [NormalizeCSS](https://github.com/necolas/normalize.css/)
-- No UI components library is being used
+- No components library is being used
 
 ## Folder structure
 
@@ -82,3 +82,7 @@ The Marketplace page allows users to buy or sell new or used bike accessories.
 The Bike Repair page gives you access to the closest bike repair shop.
 
 ![screen-repair](README-assets/screen-repair.png)
+
+## Responsive Design
+
+![page-responsiveness](README-assets/page-responsiveness.gif)
