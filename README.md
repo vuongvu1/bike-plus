@@ -37,7 +37,7 @@ pnpm install
 2. Start the app:
 
 ```
-pnpm start
+pnpm dev
 ```
 
 ## Tech Stack
