@@ -110,6 +110,7 @@ The app supports mobile, tablet and desktop viewports.
 - Provide alternative text for images
 - Ensure sufficient color contrast
 - Keyboard interaction
+
   ![keyboard-interaction](README-assets/keyboard-interaction.gif)
 
 ### Performance / User experience
