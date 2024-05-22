@@ -1,6 +1,6 @@
 # Bike Plus (prototype)
 
-Live demo: https://bikeplus.netlify.app/
+Live demo: https://bikeplus.vuongvu.xyz/
 
 BikePlus is the hub for bike lovers. Share your favorite routes, swap gear recommendations, organize group rides, and buy/sell bike accessories.
 
